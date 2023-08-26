@@ -1,0 +1,29 @@
+service:
+  name: SERVICE_NAME
+  description: SERVICE_DESCRIPTION
+
+server:
+  host: SERVER_HOST
+  port: SERVER_PORT
+  hostname: SERVER_HOSTNAME
+  swaggerSchema: SWAGGER_SCHEMA
+
+redis:
+  host: REDIS_HOST
+  port: REDIS_PORT
+  isCluster:
+    __name: IS_REDIS_CLUSTER
+    __format: json
+  defaultTtl: CACHE_TTL
+  keyPrefix: REDIS_KEY_PREFIX
+
+bull:
+  keyPrefix: BULL_KEY_PREFIX
+  maxJobs: BULL_MAX_JOBS
+  jobInterval: BULL_JOB_INTERVAL #in ms
+  numAttempts: BULL_DEFAULT_NUM_ATTEMPTS
+  backoffStrategy: BULL_DEFAULT_BACKOFF_STRATEGY
+  bypassRegistrationQueue: BULL_BYPASS_REGISTRATION_QUEUE
+  useLocalRedisForTests:
+    __name: BULL_USE_LOCAL_REDIS_FOR_TESTS
+    __format: json

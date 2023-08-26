@@ -1,0 +1,26 @@
+# Default config
+service:
+  name: nestjs-bull-unit-testing
+  description: 'Demo on doing unit and integration tests for @nestj/bull'
+  
+server:
+  host: 127.0.0.1
+  port: 3000
+  hostname: 127.0.0.1:3000
+  swaggerSchema: http
+
+redis:
+  host: '127.0.0.1'
+  port: 6379
+  isCluster: false
+  defaultTtl: 5 # seconds
+  keyPrefix: '{fuel-subsidy-cdb}'
+
+bull:
+  keyPrefix: '{nest-bull-unit-testing}'
+  maxJobs: 200
+  jobInterval: 1000 #in ms
+  numAttempts: 3
+  backoffStrategy: 'exponential'
+  bypassRegistrationQueue: false
+  useLocalRedisForTests: false
