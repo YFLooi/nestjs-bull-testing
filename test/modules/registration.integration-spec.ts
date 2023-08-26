@@ -2,8 +2,6 @@ import * as request from 'supertest';
 import { INestApplication } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
 import { RegistrationModule } from '../../src/modules/registration/registration.module';
-import { RegistrationService } from '../../src/modules/registration/registration.service';
-import { mockBullQueue } from '../../src/shared/jest-mocks';
 import { BullConfigService } from '../../src/shared/bull.helper';
 import { BullUsingInMemoryRedisService } from '../common/bull-using-in-memory-redis.service';
 import { AppModule } from '../../src/app.module';
@@ -11,7 +9,6 @@ import { RegisterUserInputDto } from '../../src/modules/registration/registratio
 
 describe('RegistrationController (integration)', () => {
   let registrationController: INestApplication;
-  let registrationService: RegistrationService;
 
   beforeEach(async () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
