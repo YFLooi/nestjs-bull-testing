@@ -24,7 +24,6 @@ describe('RegistrationController (integration)', () => {
       .compile();
 
     registrationController = moduleFixture.createNestApplication();
-    // registrationService = moduleFixture.get<RegistrationService>(RegistrationService);
 
     await registrationController.init();
   });
