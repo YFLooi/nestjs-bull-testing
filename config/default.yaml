@@ -1,8 +1,8 @@
 # Default config
 service:
-  name: nestjs-bull-unit-testing
+  name: nestjs-bull-testing
   description: 'Demo on doing unit and integration tests for @nestj/bull'
-  
+
 server:
   host: 127.0.0.1
   port: 3000

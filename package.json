@@ -1,7 +1,7 @@
 {
-  "name": "nestjs-bull-unit-testing",
+  "name": "nestjs-bull-testing",
   "version": "0.0.1",
-  "description": "Demo on unit testing for repo with @nestjs/bull",
+  "description": "Demo on unit and integration testing for repo using @nestjs/bull package",
   "author": "YF Looi",
   "private": false,
   "license": "MIT",
