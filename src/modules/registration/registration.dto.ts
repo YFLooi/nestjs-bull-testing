@@ -1,14 +1,5 @@
-import {
-  IsString,
-  IsEnum,
-  IsObject,
-  Validate,
-  ValidatorConstraint,
-  ValidatorConstraintInterface,
-  IsOptional,
-} from 'class-validator';
+import { IsString } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
-import { REGISTRATION_QUEUE } from './registration.const';
 
 export class RegisterUserInputDto {
   @IsString()

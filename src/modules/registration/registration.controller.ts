@@ -6,18 +6,13 @@ import {
   ApiBearerAuth,
 } from '@nestjs/swagger';
 import { Controller, Post, Body, BadRequestException } from '@nestjs/common';
-import {
-  RegisterUserInputDto,
-  RegisterUserResponseDto
-} from './registration.dto';
+import { RegisterUserInputDto, RegisterUserResponseDto } from './registration.dto';
 import { RegistrationProducer } from './registration.producer';
 
 @ApiTags('registration')
 @Controller('registration')
 export class RegistrationController {
-  constructor(
-    private registrationProducer: RegistrationProducer,
-  ) {}
+  constructor(private registrationProducer: RegistrationProducer) {}
 
   @Post('')
   @ApiBearerAuth('')
